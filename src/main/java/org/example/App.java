@@ -59,8 +59,19 @@ public class App
                     if (!((s = in.readLine()) != null))
                         break;
 
-                    System.out.println(s);
-                    System.out.println(s.toUpperCase());
+                    switch (s) {
+                        case "cheaper":
+                            System.out.println("cheaper");
+                            break;
+                        case "all":
+                            System.out.println("all");
+                            break;
+                        case "all_sorted":
+                            System.out.println("all_sorted");
+                            break;
+                        default:
+                            System.out.println("Invalid option");
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -75,4 +86,5 @@ public class App
         products.add(new Product(36215,"Apple IPhone 13 RED",1226.94, 10));
         System.out.println(products);
     }
+
 }
